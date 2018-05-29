@@ -1,1 +1,1 @@
-find ~ -type f | xargs du -b | sort -n | tac | head -n 5
+find ~ -type f | xargs du -b | sort -rn | head -n5
