@@ -1,3 +1,1 @@
-cd
-cd sample
-cat file1 file2 file3 | sort | uniq | sort -r | sed -n '$q'
+cat file1 file2 file3 | sort | tac | uniq | sed -n 1p
