@@ -1,1 +1,1 @@
-cat file1 file2 file3 | sort | tac | uniq | sed -n 1p
+cat ~/sample/file{1..3} | sort -r | tail -n 1
