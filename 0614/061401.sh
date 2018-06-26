@@ -1,9 +1,11 @@
-year=$1
-a=$(($year%4))
-b=$(($year%100))
-c=$(($year%400))
-if [ $a -eq 0] && [! $b -eq ] || [$c -eq 0 ]; then
-	echo $year is a leap year
+echo -n ">> "
+read in
+i4=`expr $in % 4`
+i100=`expr $in % 100`
+i400=`expr $in % 400`
+ans=`expr $i4 == 0 \& $i100 \!= 0 \| $i400 == 0`
+if [ $ans != 0 ]; then
+	echo "閏年"
 else
-	echo $year is not leap year
+	echo "閏年ではない"
 fi
